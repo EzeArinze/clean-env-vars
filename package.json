@@ -1,6 +1,6 @@
 {
   "name": "clean-env-vars",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A dev utility that scans .env files, detects unused environment variables, validates presence of required keys, and supports both process.env and import.meta.env patterns.",
   "main": "dist/index.js",
   "bin": {
@@ -30,15 +30,15 @@
     "import.meta.env",
     "vite"
   ],
-  "author": "EMMA",
+  "author": "eze-arinze",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/clean-env-vars.git"
+    "url": "https://github.com/EzeArinze/clean-env-vars.git"
   },
-  "homepage": "https://github.com/username/clean-env-vars#readme",
+  "homepage": "https://github.com/EzeArinze/clean-env-vars#readme",
   "bugs": {
-    "url": "https://github.com/username/clean-env-vars/issues"
+    "url": "https://github.com/EzeArinze/clean-env-vars/issues"
   },
   "devDependencies": {
     "@types/commander": "^2.12.0",
