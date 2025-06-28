@@ -4,11 +4,26 @@ import path from 'path';
 
 export async function run() {
   const rootDir = process.cwd();
-  const envPath = path.join(rootDir, '.env');
+  
+  // Support multiple .env file variants
+  const envFiles = [
+    '.env',
+    '.env.local',
+    '.env.development',
+    '.env.production',
+    '.env.test'
+  ];
+  
   const envExamplePath = path.join(rootDir, '.env.example');
 
-  const [env, envExample, usedInCode] = await Promise.all([
-    parseEnvFile(envPath),
+  // Parse all .env files and merge them
+  const allEnvFiles = await Promise.all(
+    envFiles.map(file => parseEnvFile(path.join(rootDir, file)))
+  );
+  
+  const env = allEnvFiles.reduce((merged, current) => ({ ...merged, ...current }), {});
+  
+  const [envExample, usedInCode] = await Promise.all([
     parseEnvFile(envExamplePath),
     scanForEnvUsage(path.join(rootDir, 'src')),
   ]);
