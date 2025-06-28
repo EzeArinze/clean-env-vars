@@ -1,0 +1,53 @@
+{
+  "name": "clean-env-vars",
+  "version": "1.0.1",
+  "description": "A dev utility that scans .env files, detects unused environment variables, validates presence of required keys, and supports both process.env and import.meta.env patterns.",
+  "main": "dist/index.js",
+  "bin": {
+    "clean-env-vars": "bin/clean-env-vars"
+  },
+  "files": [
+    "dist/**/*",
+    "bin/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "env",
+    ".env",
+    "environment variables",
+    "cleanup",
+    "dotenv",
+    "env-vars",
+    "development",
+    "cli",
+    "tool",
+    "process.env",
+    "import.meta.env",
+    "vite"
+  ],
+  "author": "EMMA",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/clean-env-vars.git"
+  },
+  "homepage": "https://github.com/username/clean-env-vars#readme",
+  "bugs": {
+    "url": "https://github.com/username/clean-env-vars/issues"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.0",
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "dotenv": "^16.4.5",
+    "fast-glob": "^3.3.3"
+  }
+}

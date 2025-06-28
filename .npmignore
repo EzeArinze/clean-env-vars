@@ -1,0 +1,63 @@
+# Source files (TypeScript)
+src/
+tsconfig.json
+
+# Development and build artifacts
+node_modules/
+.git/
+.gitignore
+
+# Test and development files
+*.test.js
+*.test.ts
+test/
+tests/
+__tests__/
+coverage/
+
+# Environment files (examples only)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Lock files (let users generate their own)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Development scripts
+scripts/
+docs/
+
+# Linting and formatting
+.eslintrc*
+.prettierrc*
+.editorconfig
+
+# CI files
+.github/
+.travis.yml
+.circleci/
+azure-pipelines.yml
+
+# Misc
+*.tgz
