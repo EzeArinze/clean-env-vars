@@ -1,6 +1,6 @@
 {
   "name": "clean-env-vars",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A dev utility that scans .env files, detects unused environment variables, validates presence of required keys, and supports both process.env and import.meta.env patterns.",
   "main": "dist/index.js",
   "bin": {
